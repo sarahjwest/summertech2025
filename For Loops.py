@@ -1,3 +1,13 @@
+"""for i in range (5):
+    for j in range (5):
+        print ("* ", end = "")
+    print ()"""
+# Square
+"""for i in range (3):
+    for j in range (i + 1):
+        print ("* " , end = "")
+    print ()"""
+#Right Traiangle
 """for j in range (3):
     for k in range (3-j):
         print (" ",end= "")
