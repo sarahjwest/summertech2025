@@ -10,11 +10,16 @@ if q1 == "Y":
         if q3 == "N":
             print (" You go north and find a forest.")
             q4 = input ("Do you want to enter? Y or N.")
-            if q4 == Y 
+            if q4 == "Y":
+                print ("You find some wild cats that kill you")
+            elif q4 == "N":
+                print ("A little kid finds you and sticks you in a blender and you die.")
         elif q3 == "S":
+            print ("You run into a wolf that eats you")
         elif q3== "W":
-
+            print ("You die to a trap.")
     elif q2 == "N":
-
+        print ("A humman finds you and sticks you in the micorwave and you die.")
 elif q1 == "N":
+    print ("You die to starvation when your owner never comes and feeds you.")
     
