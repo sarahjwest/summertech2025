@@ -114,5 +114,4 @@ while Tree == True:
 
     Again = input ("Do you want to play again? Answer Y or N. ")
     if Again == "N":
-        Tree = False
-        print ("Why, shapes are FUN!!!!")
+        print ("Why, shapes are FUN!!!!Now you will keep going;)")
