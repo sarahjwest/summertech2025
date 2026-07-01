@@ -1,3 +1,3 @@
 import Carrrd
-c=Carrrd.card("clubs",10)
+c=Carrrd.card("clubs",12)
 print (c)

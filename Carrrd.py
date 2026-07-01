@@ -12,5 +12,6 @@ class card:
         elif self.v == 1:
             return ("Ace of "+self.suit)
         else:
-            return (self.v," of "+self.suit)
-    
+            return (str(self.v)+" of "+self.suit)
+    def __repr__(self):
+        return str(self)

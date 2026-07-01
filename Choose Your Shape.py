@@ -72,7 +72,7 @@ while Tree == True:
             for i in range (1):
                 print ("* ",end = "")
             for y in range (j + j):
-                print (" ",end = "")
+                print (" ",end = "")i
             for f in range (1):
                 print ("* ",end = "")
             print()
