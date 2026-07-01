@@ -1,17 +1,20 @@
 Toes= [["_ ","_ ","_ "],["_ ","_ ","_ "],["_ ","_ ","_ "],]
 mark= ("X ")
 feet = True
+t=0
 while feet == True:
     for i in range (0,3):
         for j in range (0,3):
             print (Toes [i][j],end = "")
         print (" ")
 
+
     
     Ticks1 = int( input ("Choose a row 0, 1, or 2"))
     Tacks1 = int (input ("Choose a column 0, 1, or 2"))
+    t=t+1
     while Toes [Ticks1][Tacks1] != ("_ "):
-        print ("you cannot put somthing there.")
+        print ("You cannot put somthing there!")
         Ticks1 = int( input ("Choose a row 0, 1, or 2"))
         Tacks1 = int (input ("Choose a column 0, 1, or 2"))
     Toes [Ticks1][Tacks1] = mark
@@ -38,9 +41,12 @@ while feet == True:
         print ("You win:)")
         feet = False
     elif Toes[0][2]== mark and Toes[1][1]== mark and Toes[2][0] == mark:
-        print ("You win:)")
+        print ("You win")
         feet = False
-    if mark == "X ":
+    elif t == 9:
+        print("tie")
+        feet = False
+    elif mark == "X ":
         mark = ("O ")
     elif mark == "O ":
         mark = ("X ")

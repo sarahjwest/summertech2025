@@ -19,6 +19,8 @@ while Tree == True:
         Sad[1][Bad] = Mark
     elif Sad[0][Bad] == "_ ":
         Sad[0][Bad] = Mark
+    else:
+        print ("That is not an option. You loose your turn. haha!")
     
     if Mark == "X ":
         Mark = "O "

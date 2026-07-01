@@ -14,5 +14,7 @@ class dec:
     def shuffle(self):
         for i in range (len(self.dec)):
             Sorta_Sorty.swop (self.dec,i,random.randint(i,len(self.dec)-1))
-
-        
+    def __len__(self):
+        return (len(self.dec))
+    def draw(self):
+        return(self.dec.pop())

@@ -2,3 +2,6 @@ import Dec
 d= Dec.dec()
 d.shuffle()
 print(d)
+print(len(d))
+print(d.draw())
+print(len(d))

@@ -15,3 +15,7 @@ class card:
             return (str(self.v)+" of "+self.suit)
     def __repr__(self):
         return str(self)
+    def gitsuit(self):
+        reurn (self.suit)
+    def gitvalue(self):
+        return (self.v)
