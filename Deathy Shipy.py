@@ -35,7 +35,7 @@ def vali(l,b,r,c,d):
         for i in range(l,b,r,c,d):
             if r >9 or r<0 or c>9 or c< 0:
                 volad =False
-            elif b[v][c+i]== " * ":
+            elif b[v+i][c]== " * ":
                 volad = False
         return volad
     else:
