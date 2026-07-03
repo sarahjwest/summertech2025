@@ -44,7 +44,7 @@ while feet == True:
         print ("You win")
         feet = False
     elif t == 9:
-        print("tie")
+        print("Tie. Did you think anyone was gonna win? Its ticks tacks and toes!")
         feet = False
     elif mark == "X ":
         mark = ("O ")
