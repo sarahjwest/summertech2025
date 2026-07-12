@@ -18,6 +18,7 @@ def place(l,b):
         if vali(l,b,row,collum,d):
             complace(l,b,row,collum,d) 
             lick = False
+    return(b)
 def complace(l,b,r,c,d):
     if d == "h":
         for i in range(l):
@@ -44,19 +45,32 @@ def vali(l,b,r,c,d):
         return volad
     else:
         return False
-def pow(cb, jig):
-    pint(jiggle)
+def pow():
     roow = int(input("which row to fire a cannonball at?"))
     cool = int(input ("which collum to fire a cannonball at?"))
-    if [roow][cool] == " * ":
+    if jimmy[roow][cool] == " * ":
         print("Hit!")
         jiggle[roow][cool]= " ^ "
-    elif [roow][cool]== " _ ":
+    elif jimmy[roow][cool]== " _ ":
         print("Miss.")
-        [roow][cool]= " # " 
+        jiggle[roow][cool]= " # " 
+    pint(jiggle)
+def compow(b):
+    rooow = random.randint(0,9)
+    coool = random.randint(0,9)
+    if b[rooow][coool]== " * ":
+        print("You got hit:(")
+        b[rooow][coool] = " ^ "
+    elif b[rooow][coool] == " _ ":
+        print("The computer missed:)")
+        b[rooow][coool]=" # "
+    else:
+        print("EROAR")
+    pint(big_board)
+
 siz = [5,4,3,3,2]
 for i in (siz):
-    place (i,big_board)
+    big_board=place (i,big_board)
 for jgy in (siz):
     ugugu = True
     while ugugu == True:
@@ -66,20 +80,7 @@ for jgy in (siz):
         if vali(jgy,jimmy,jog,jag,jug):
             complace(jgy,jimmy,jog,jag,jug)
             ugugu = False
-j=True
+j =True
 while j == True:
-
-
-
-
-#hi i like toes.
-#do you like toes?
-#they are yummy.
-#i like to lick them.
-#jimmy licks with me.
-#he is an expert toe licker.
-#he knows which toes are the best
-#can i have your toes?
-#i want your toes.
-#give me your toes.
-#i will lick them.
+    pow()
+    compow(big_board)
