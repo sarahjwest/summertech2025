@@ -10,7 +10,7 @@ def stort(b):
     if gh == 1:
         for i in range(len(b)):
             for j in range(len(b[i])):
-                ghg=random.randint(1,6)
+                ghg=random.randint(1,5)
                 if ghg==1:
                     b[i][j] = "X"
                 else:
@@ -21,12 +21,31 @@ def stort(b):
         b=[[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," ","X"," ","X"," "," "," "," "],[" "," "," ","X"," ","X"," "," "," "," "],[" "," "," ","X"," ","X"," "," "," "," "],[" "," "," "," ","X"," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "]]
     return(b)
 def woke(b):
-    neigh = 0
-    for i in range(-1,2):
-        for j in range(-1,2):
-            if not
-            if b[i][j]=="X":
-                neigh = neigh+1
-    if ne
+    bode=[[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "],[" "," "," "," "," "," "," "," "," "," "]]
+    for a in range(len(b)):
+        for h in range(len(b)):
+            neigh = 0
+            for i in range(-1,2):
+                for j in range(-1,2):
+                    try:
+                        if i==-1 or i==1 or j==-1 or j==1:
+                            if b[i+a][j+h]=="X":
+                                neigh = neigh+1
+                    except IndexError:
+                        print("",end="")
+            if neigh==0 or neigh==1:
+                bode[a][h]=" "
+            elif neigh==2:
+                bode[a][h]=b[a][h]
+            elif neigh==3:
+                bode[a][h]="X"
+            elif neigh>=4:
+                bode[a][h]=" "
+    return(bode)
 bode=stort(bode)
+ye=True
 pint(bode)
+while ye==True:
+    bode=woke(bode)
+    pint(bode)
+    input()
