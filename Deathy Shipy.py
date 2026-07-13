@@ -56,16 +56,18 @@ def pow():
         jiggle[roow][cool]= " # " 
     pint(jiggle)
 def compow(b):
-    rooow = random.randint(0,9)
-    coool = random.randint(0,9)
-    if b[rooow][coool]== " * ":
-        print("You got hit:(")
-        b[rooow][coool] = " ^ "
-    elif b[rooow][coool] == " _ ":
-        print("The computer missed:)")
-        b[rooow][coool]=" # "
-    else:
-        print("EROAR")
+    ghhg=True
+    while ghhg == True:
+        rooow = random.randint(0,9)
+        coool = random.randint(0,9)
+        if b[rooow][coool] == " * ":
+            print("You got hit:(")
+            b[rooow][coool] = " ^ "
+            ghhg=False
+        elif b[rooow][coool] == " _ ":
+            print("The computer missed:)")
+            b[rooow][coool]=" # "
+            ghhg=False
     pint(big_board)
 
 siz = [5,4,3,3,2]
@@ -83,4 +85,21 @@ for jgy in (siz):
 j =True
 while j == True:
     pow()
+    g = 0
+    for i in (jiggle):
+        for a in i:
+            if a==" ^ ":
+                g=g+1
+    if g == 17:
+        print ("You win.")
+        j=False
+        break
     compow(big_board)
+    h = False
+    for i in (big_board):
+        if " * " in i:
+            h=True
+    if h == False:
+        print ("You loose. Haha!")
+        j=False
+
