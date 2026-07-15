@@ -22,11 +22,16 @@ class LinkList:
         return v.value
     def remove(self,Index):
         v= self.head
-        for i in range(Index-1):
-            v=v.next
-        r=v.next
-        v.next=v.next.next
-        return r.value
+        if Index==0:
+            r=self.head
+            self.head=self.head.next
+            return r.value
+        else:
+            for i in range(Index-1):
+                v=v.next
+            r=v.next
+            v.next=v.next.next
+            return r.value
     def length(self):
         v=self.head
         c=1
