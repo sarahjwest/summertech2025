@@ -38,20 +38,20 @@ class LinkList:
         if v==None:
             return 0
         else:
-            while v.next != None:
+            while v != None:
                 v=v.next
                 c=c+1
             return c
-"""link = LinkList()
+link = LinkList()
 link.append()
 link.append()
 link.append()
-for i in range (link.length()):
+for i in range (link.length()-1):
     h=link.get(i)
     print(h)
 d=int(input("What to remove "))
 link.remove(d)
-for i in range (link.length()):
+for i in range (link.length()-1):
     h=link.get(i)
-    print(h)"""
+    print(h)
 

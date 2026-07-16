@@ -3,11 +3,18 @@ class Person:
         self.money=money
         self.age=age
         self.name=name
+    def Work(self):
+        print("I was fried from my last job.")
 class Programmer(Person):
-    def __init__(self,level,computer,field):
-        super.__init__()
+    def __init__(self,money,age,name,level,computer,field):
+        super().__init__(money,age,name)
         self.level=level
         self.computer=computer
         self.field=field
-P=Programmer(None,"Omen",None)
+    def Work(self):
+        super().Work()
+        print("I never got a job because I am bad at coding. I never get hired.")
+P=Programmer(None,25,"Bob",None,"Omen",None)
 print(P.name)
+print(P.money)
+P.Work()
