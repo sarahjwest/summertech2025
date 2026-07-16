@@ -24,16 +24,14 @@ class Tree:
     def Search(self,num):
         c= self.root
         while True:
-            if num > c.value:
+            if c==None:
+                return False
+            elif num > c.value:
                 c = c.right
             elif num < c.value:
                 c=c.left
             elif num==c.value:
                 return True
-                break
-            elif c==None:
-                return False
-                break
     def remove(self,num):
         c = self.root
         p=None
@@ -47,7 +45,20 @@ class Tree:
             elif c==None:
                 break
             elif c.value==num:
-                if c.right==None and c.left==None:
+                if p == None:
+                    if c.right==None and c.left == None:
+                        self.root=None
+                    elif c.left==None:
+                        self.root=c.right
+                    elif c.right==None:
+                        self.root = None
+                    else:
+                        self.root=c.right
+                        k=c.right
+                        while k.left != None:
+                            k=k.left
+                        k.left=c.left
+                elif c.right==None and c.left==None:
                     if p.left == c:
                         p.left= None
                     elif p.right == c:
@@ -75,10 +86,13 @@ class Tree:
                         while k.left != None:
                             k=k.left
                         k.left=c.left
+                break
+class AVL_Tree(Tree):
+    
 t=Tree(3)
 for i in range(10):
     g=int(input("What to add to tree"))
     t.append(g)
 s=int(input("What to remove"))
 t.remove(s)
-t.Search(s)
+print(t.Search(s))
