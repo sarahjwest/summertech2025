@@ -88,7 +88,14 @@ class Tree:
                         k.left=c.left
                 break
 class AVL_Tree(Tree):
-    
+    def __init__(self,root):
+        super.__init__(root)
+    def append(self, num):
+        return super().append(num)
+        
+    def remove(self, num):
+        return super().remove(num)
+
 t=Tree(3)
 for i in range(10):
     g=int(input("What to add to tree"))

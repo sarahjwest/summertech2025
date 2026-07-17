@@ -4,7 +4,7 @@ class Person:
         self.age=age
         self.name=name
     def Work(self):
-        print("I was fried from my last job.")
+        print("I was fired from my last job.")
 class Programmer(Person):
     def __init__(self,money,age,name,level,computer,field):
         super().__init__(money,age,name)
